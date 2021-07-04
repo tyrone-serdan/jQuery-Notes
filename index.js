@@ -23,7 +23,7 @@ $("p").removeClass("ugly-color");
                                         // The equivalent of
                                         // innerHTML & innerText
 $("p").text("sexy wexy");
-$("p").html("<em>bruh momento</em>");
+$("p").html("<em>read index.js to understand lol</em>");
                                         // You can also get the text with this
 var pTagText = $("p").text();
 
@@ -47,7 +47,7 @@ $("p").click(AlertFunc);
                                         // dont add a loop, just write the same thing.
                                         // it will automatically add the listener
                                         // to all applicable selectors :D
-$("button").click(AlertFunc);
+$(".alert").click(AlertFunc);
                                         // want to check keyboard events?
                                         // bro there is a built in function for that
                                         // so its pretty pog
@@ -62,4 +62,17 @@ $("p").after("<button> im after the p tag! </button>");     // shows after the p
 $("p").prepend("<button>prepend</button>");                 // before the content, inside the tag
 $("p").append("<button>append</button>");                   // after the content, inside the tag
 
+                                        // So you fucked up and now you want to remove stuff
+                                        // just do this my guy
+$(".remove-me").remove();                   
 
+                                        // Maybe removing is too much and you just wanna hide stuff
+                                        // tis a simple fix my guy
+$(".hide-me").hide();
+
+                                        // Okay maybe hiding something forever is a bad thing
+                                        // why not toggle them
+function toggleP() { $("p").toggle() // The function right here broski
+;} 
+
+$(".toggle-h1").click(toggleP);
