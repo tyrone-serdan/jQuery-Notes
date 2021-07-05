@@ -56,6 +56,7 @@ $("input").keyup(AlertFunc);
                                         // So you wanna be extra special and make html
                                         // changes in javascript.
                                         // thats where these functions come in!
+
 $("p").before("<button> im before the p tag! </button>");   // shows before the p tag
 $("p").after("<button> im after the p tag! </button>");     // shows after the p tag
 
@@ -72,7 +73,26 @@ $(".hide-me").hide();
 
                                         // Okay maybe hiding something forever is a bad thing
                                         // why not toggle them
-function toggleP() { $("p").toggle() // The function right here broski
-;} 
+function toggleP() { $("p").toggle() ;} // This function right here broski  
+$(".toggle-p").click(toggleP);
 
-$(".toggle-h1").click(toggleP);
+                                        // Do you want to be extra fancy?
+                                        // Jquery has some built in animations my guy
+                                        // These are the sexy animations
+
+function slideAnim() { $("p").slideToggle() ;}              // slideUp & slideDown exist too
+$(".slide-p").click(slideAnim);
+
+function animateFunction() {            // Can do css stuff on the func below
+    $("p").animate( {opacity: 0.5} );   // EXTREMELY IMPORTANT!!!
+                                        // you can only use numeric CSS values on the .animate func
+}
+$(".animate-p").click(animateFunction);
+
+                                        // Be mr fancy pants and chain the animations
+                                        // Jquery orders the animation changes from left to right
+function chainAnim() {
+    $("p").slideUp().slideDown().animate( {margin: "10%"} ).animate( {margin : 0} );
+}
+$(".chain-p").click(chainAnim);
+
